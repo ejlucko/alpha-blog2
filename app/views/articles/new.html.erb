@@ -1,26 +1,5 @@
 <h1>Create a new Article</h1>
-<!--scope: defines scope, :article is the model as a symbol. url is articles_path or the create action. local: true makes it HTTP post instead of ajax. This scopes the form to the article model using the create action-->
-<% if @article.errors.any? %> <!--@article comes from the create action in articles.controller.rb-->
-  <h2>The following errors prevented the article from being saved.</h2>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>  
-  </ul>
-<% end %>
 
-<%= form_with scope: :article, url: articles_path, local: true do |f| %>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
+<%= render 'form' %>
 
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
 <p><%= link_to 'Return to articles listing', articles_path %></p>

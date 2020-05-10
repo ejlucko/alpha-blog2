@@ -1,28 +1,5 @@
 <h1>Edit Article</h1>
-<!--model: @article creates the url for the update, no need for url: article_path, it's the edit form, in the edit route so it knows to go to update for this article  but it works with or without it-->
-<% if @article.errors.any? %> <!--@article comes from the create action in articles.controller.rb-->
-  <h2>The following errors prevented the article from being saved.</h2>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>  
-  </ul>
-<% end %>
 
-<%= form_with(model: @article, local: true) do |f| %>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-
-<% end %>
+<%= render 'form' %>
 
 <p><%= link_to 'Cancel and return to articles listing', articles_path %></p>
