@@ -9,7 +9,7 @@
   </ul>
 <% end %>
 
-<%= form_with(model: @article local: true) do |f| %>
+<%= form_with(model: @article, local: true) do |f| %>
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -24,3 +24,5 @@
   </p>
 
 <% end %>
+
+<p><%= link_to 'Cancel and return to articles listing', articles_path %></p>
