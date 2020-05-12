@@ -1,0 +1,55 @@
+@import "bootstrap";
+
+#home-container {
+  margin-top: 25px;
+}
+
+.navbar {
+  background-color: black;
+  .nav-link {
+    color: white;
+  }
+  #logo {
+    color: white;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+  }
+}
+
+.jumbotron {
+  background-image: asset-url('typewriter.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 425px;
+}
+
+.navbar-brand {
+  font-size: 3rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+/* Other Classes for Page Styling */
+/*
+body {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+
+*/
