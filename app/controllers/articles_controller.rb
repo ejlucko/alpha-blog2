@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
     #@article = Article.new(params[:article]). You'd think this would be enough to save the article
     #it isn't because you need to whitelist the parameters to save to the database.
     @article = Article.new(article_params) #whitelisting strong parameters
-    @article.user = User.first
+    @article.user = current_user
     #create a new article and require that article, (key from the params hash), to only allow a title and descripion to be saved
     #render plain @article.inspect will show our article table entry on a blank page but since it hasn't been saved yet, everything will be nil except title and description
     if @article.save
