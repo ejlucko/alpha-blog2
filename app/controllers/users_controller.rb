@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
 
+<<<<<<< HEAD
   def show
     @articles = @user.articles.paginate(page: params[:page], per_page: 5)
   end
@@ -9,6 +10,8 @@ class UsersController < ApplicationController
     @users = User.paginate(page: params[:page], per_page: 5)
   end
 
+=======
+>>>>>>> parent of 6a8c527... Add users show page
   def new
     @user = User.new
   end

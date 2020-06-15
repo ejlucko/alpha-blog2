@@ -1,4 +1,5 @@
 module ApplicationHelper
+<<<<<<< HEAD
 
   def gravatar_for(user, options = {size: 80})
     email_address = user.email.downcase
@@ -16,4 +17,6 @@ module ApplicationHelper
     !!current_user
   end
   
+=======
+>>>>>>> parent of 6a8c527... Add users show page
 end
