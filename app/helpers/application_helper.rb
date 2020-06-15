@@ -8,6 +8,7 @@ module ApplicationHelper
     gravatar_url = "https://www.gravatar.com/avatar/#{hash}?s=#{size}"
     image_tag(gravatar_url, alt: user.username, class: "rounded mx-auto d-block shadow")
   end
+<<<<<<< HEAD
 
   def current_user
     @currentuser ||= User.find(session[:user_id]) if session[:user_id]
@@ -19,4 +20,6 @@ module ApplicationHelper
   
 =======
 >>>>>>> parent of 6a8c527... Add users show page
+=======
+>>>>>>> parent of f21f077... 158 not working
 end
